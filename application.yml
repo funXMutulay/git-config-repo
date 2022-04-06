@@ -1,0 +1,39 @@
+spring:
+   application:
+      name: configserver    
+   cloud:
+     config:
+       server:
+           git:
+             uri: file://C:/Users/mmduk/eclipse-workspace/git-config-local-repo  
+   sleuth:
+      sampler:
+         probability: 1.0
+
+
+   main:
+      allow-bean-definition-overriding: true
+
+
+server:
+   port: 8888
+
+
+
+  
+
+
+#spring.cloud.config.server.git.default-label=master
+#spring.profiles.active=native
+
+eureka:
+   client:
+      serviceUrl-defaultZone: http://localhost:8761/eureka
+      region: default
+      register-with-eureka: true
+      fetch-registry: true
+      
+
+#spring.main.allow-bean-definition-overriding=true
+
+   
