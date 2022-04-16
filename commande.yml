@@ -1,0 +1,30 @@
+ 
+server:
+   port: 8100
+
+
+
+spring:
+   application:
+     name: commande
+   sleuth:
+      sampler:
+        probability: 1.0
+   cloud:
+     config:
+        import: optional:configserver:http://localhost:8888/
+        server:
+           git:
+              uri : file:///C:/Users/mmduk/eclipse-workspace/git-config-local-repo
+        enabled: false
+        import-check: 
+           enabled: false
+eureka:
+   client:
+      register-with-eureka: true
+      fetch-registry: true
+      service-uri:
+        defaultZone: http://localhost:8761/eureka/
+   instance:
+     hostname: localhost 
+         
